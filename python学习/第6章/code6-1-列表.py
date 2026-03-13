@@ -1,3 +1,6 @@
+# 数据容器：一种能存放多个数据的数据类型
+# list ,tuple,str,set,dict
+
 # 列表的创建
 # 空列表
 test =[]
@@ -23,7 +26,11 @@ print(list3)
 print(list4)
 
 # 列表的索引
+# 正负索引
+print('*'*10+'正负索引')
 print(list4[3])
+print(list4[2])
+print(list4[-1])
 
 
 # 列表的切片：包头不包尾
@@ -79,12 +86,27 @@ print(list4)
 # 根据索引来删除元素
 list4.pop(3)
 print(list4)
+nums=[11,22]
+list4.extend(nums)
+print(list4)
 # 根据元素来删除，删除的是元素值，从头开始找，只删除第一个
 list4.remove(2)
 # 反转列表
 list4.reverse()
-# 清空列表
-list4.clear()
+index = list4.index(1)
+print(index)
+# 统计某个元素在列表中出现的次数，不包含嵌套雷彪，返回值是“元素出现的次数”
+list4.count(1)
+# 列表的排序，默认是从小到大，如果想实现从大到小，可以设置reverse=True
+# 如果列表中的元素：既有数字，又有字符串，那么就会报错
+# list4.sort(reverse=True)
+# 若列表中的元素：都是字符串，则按照字符串的Unicode编码大小进行排序
+msg_list=['北京','你好','世界']
+msg_list.sort()
+print(msg_list)
+print(ord('北'))
+# 所有的列表方法，都只是作用当前层的元素，不会自动进入嵌套的里层结构中
+# list4.clear()
 
 # 计算若干人的平均年龄
 
